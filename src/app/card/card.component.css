@@ -1,0 +1,126 @@
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    
+}
+
+article {
+    padding: 10px;
+    background: white;
+    margin: 5px;
+    text-align: center;
+    border-radius: 5px; 
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    grid-template-areas:
+      "left right"
+      "down down";
+}
+
+.left { 
+    grid-area: left; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.right { 
+    margin-left: 20px;
+    margin-right: 20px;
+    grid-area: right; 
+}
+
+.right-content {
+    width: 200px;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.down { 
+    grid-area: down; 
+}
+
+.down-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    width: 120px;
+}
+
+select {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    width: 120px;
+}
+
+button {
+    cursor: pointer;
+    margin-top: 5px;
+    width: 120px;
+    border: none;
+    border-radius: 3px;
+}
+
+.warning {
+    color: white;
+    background-color: rgb(240, 35, 35);
+}
+
+.primary {
+    color: black;
+    background-color: rgb(93, 248, 93);
+}
+
+
+.toast {
+    position: fixed;
+    left: calc(-50vw + 50%);
+    right: calc(-50vw + 50%);
+    margin-left: auto;
+    margin-right: auto;
+    visibility: hidden;
+    min-width: 250px;
+    max-width: 300px;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    z-index: 1;
+    bottom: 100px;
+    font-size: 17px;
+}
+
+.active {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    z-index: 5;
+}
+
+.small {
+    width: 60px;
+}
