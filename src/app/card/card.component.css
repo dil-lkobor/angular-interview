@@ -25,11 +25,21 @@ article {
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 60px 1fr 1fr;
     gap: 10px;
     grid-template-areas:
+      "up up"
       "left right"
       "down down";
+}
+
+.up {
+    height: 50px;
+    grid-area: up; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .left { 
@@ -69,13 +79,12 @@ article {
 input {
     margin-top: 5px;
     margin-bottom: 15px;
-    width: 120px;
+    width: 80px;
 }
 
 select {
     margin-top: 5px;
     margin-bottom: 15px;
-    width: 120px;
 }
 
 button {
